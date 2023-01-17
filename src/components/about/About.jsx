@@ -4,8 +4,13 @@ import ME from '../../assets/about-me.jpeg'
 import {FaAward} from 'react-icons/fa'
 import {FiUsers} from 'react-icons/fi'
 import {VscFolderLibrary} from 'react-icons/vsc'
+import { useTranslation } from 'react-i18next';
+
 
 const about = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { t } = useTranslation();
+
   return (
     <section id='about'>
       <h5>Get To Know</h5>
@@ -27,18 +32,25 @@ const about = () => {
 
             <article className='about__card'>
               <FiUsers className='about__icon'/>
-              <h5>Clients</h5>
-              <small>200+ Worldwide</small>
+              <h5>Skills</h5>
+              <small>4+ Programming Languages</small>
             </article>
 
             <article className='about__card'>
               <VscFolderLibrary className='about__icon'/>
               <h5>Projects</h5>
-              <small>80+ Completed</small>
+              <small>6+ Completed</small>
             </article>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sapiente quasi reprehenderit voluptatem blanditiis aspernatur? Ea tempora esse accusamus iusto dignissimos voluptas eius fuga perferendis ut qui, delectus consequatur aut.
+          I've completed my bachelor's degree in computer science at University of Tabriz, and also my master's degree in computer science at university of Tabriz. My master's thesis is about Intrusion Detection Systems.
+
+I'm an analytical and detail oriented client side developer with experience in designing, developing,
+testing and supporting web and mobile applications in Java, Kotlin, Dart and JavaScript.
+
+I've recently contributed in an IoT project. I developed a smart home android application and PWA with flutter and dart.
+
+In Addition, I'm working on a Crypto Gateway project which transfers USDT on the Tron network and would integrate in every business such as online shops. I implemented the front side of this project with ReactJS.
           </p>
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div>
