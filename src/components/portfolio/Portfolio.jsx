@@ -5,9 +5,9 @@ import IMG2 from '../../assets/portfolio2.png'
 import IMG3 from '../../assets/portfolio3.png'
 import IMG4 from '../../assets/portfolio4.png'
 import IMG5 from '../../assets/portfolio5.png'
-import IMG6 from '../../assets/portfolio6.png'
+import IMG6 from '../../assets/portfolio8.png'
 
-
+ 
 const data = [
   {
     id: 1,
@@ -17,7 +17,7 @@ const data = [
   },
   {
     id: 2,
-    image: IMG1,
+    image: IMG6,
     title: 'Crypto Gateway',
     description: 'A payment processor for USDT currency on Tron network enabling any business to accept USDT payments. A Kafka-centric microservice architecture is implemented in this project.',
   },

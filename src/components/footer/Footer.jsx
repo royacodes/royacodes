@@ -7,7 +7,7 @@ import {FiDribbble} from 'react-icons/fi'
 const Footer = () => {
   return (
     <footer>
-      <a href="#" className='footer__logo'>AllstarSoft</a>
+      <a href="#" className='footer__logo'>RoyaCodes</a>
       <ul className='permlinks'>
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -25,7 +25,7 @@ const Footer = () => {
       </div>
 
       <div className="footer__copyright">
-        <small>&copy; AllstarSoft. All rights reserved.</small>
+        <small>&copy; RoyaCodes. All rights reserved.</small>
       </div>
     </footer>
   )
