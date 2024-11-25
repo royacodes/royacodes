@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/royacodes/static/css/main.7100157d.css",
-    "main.js": "/royacodes/static/js/main.ccef532c.js",
+    "main.js": "/royacodes/static/js/main.0c411b40.js",
     "static/media/portfolio2.png": "/royacodes/static/media/portfolio2.f291570dffbe6cff8b6a.png",
     "static/media/portfolio3.png": "/royacodes/static/media/portfolio3.e57a464fcc29aa5dfdb5.png",
     "static/media/portfolio4.png": "/royacodes/static/media/portfolio4.eb66bef22c832a8cb24b.png",
     "static/media/portfolio1.png": "/royacodes/static/media/portfolio1.dbe001ddc03c2a76a717.png",
     "static/media/portfolio5.png": "/royacodes/static/media/portfolio5.295adc1b4ce8c77affbe.png",
+    "static/media/cv.pdf": "/royacodes/static/media/cv.c5133e1d47a8496be7dc.pdf",
     "static/media/me.jpeg": "/royacodes/static/media/me.038e80a13953e7b5d2c7.jpeg",
     "static/media/portfolio8.png": "/royacodes/static/media/portfolio8.f5ff61b20a01f85281b8.png",
-    "static/media/cv.pdf": "/royacodes/static/media/cv.8a9990d9ed2565fc1e7d.pdf",
     "index.html": "/royacodes/index.html",
     "main.7100157d.css.map": "/royacodes/static/css/main.7100157d.css.map",
-    "main.ccef532c.js.map": "/royacodes/static/js/main.ccef532c.js.map"
+    "main.0c411b40.js.map": "/royacodes/static/js/main.0c411b40.js.map"
   },
   "entrypoints": [
     "static/css/main.7100157d.css",
-    "static/js/main.ccef532c.js"
+    "static/js/main.0c411b40.js"
   ]
 }
