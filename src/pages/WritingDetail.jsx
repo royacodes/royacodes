@@ -126,6 +126,17 @@ export default function WritingDetail() {
           {excerpt}
         </p>
 
+        {post.image && (
+          <div className="mt-8 overflow-hidden rounded-2xl border border-border">
+            <img
+              src={post.image}
+              alt={title}
+              className="h-64 w-full object-cover md:h-80"
+              loading="lazy"
+            />
+          </div>
+        )}
+
         {Array.isArray(post.tags) && post.tags.length > 0 && (
           <div className="mt-8 flex flex-wrap gap-2">
             {post.tags.map((tag) => (

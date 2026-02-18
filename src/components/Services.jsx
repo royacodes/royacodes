@@ -77,7 +77,7 @@ export default function Services() {
                     ))}
                   </ul>
 
-                  <div className="mt-6 pt-4 border-t border-border flex items-center justify-between">
+                  {/* <div className="mt-6 pt-4 border-t border-border flex items-center justify-between">
                     <span className="text-sm font-semibold text-accent">
                       {servicePrice}
                     </span>
@@ -85,7 +85,7 @@ export default function Services() {
                       size={16}
                       className="text-muted group-hover:text-accent transition-colors"
                     />
-                  </div>
+                  </div> */}
                 </div>
               </ScrollReveal>
             );

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { NAV_LINKS, SECTIONS } from "../data/constants";
 import useLocale from "../hooks/useLocale";
 import { pickLocale } from "../utils/locale";
@@ -25,6 +26,14 @@ export default function Header() {
     };
   }, [isMobileOpen]);
 
+  const toHomeHash = (hash) => {
+    if (!hash?.startsWith("#")) {
+      return hash;
+    }
+
+    return `/${hash}`;
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -35,24 +44,24 @@ export default function Header() {
     >
       <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="relative z-50">
+        <Link to="/" className="relative z-50">
           <span className="text-xl font-bold tracking-tight text-text-primary">
             Roya
             <span className="text-accent">.</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <a
-                href={link.href}
+              <Link
+                to={toHomeHash(link.href)}
                 className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200 relative group"
               >
                 {pickLocale(link.label, locale)}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-accent transition-all duration-300 group-hover:w-full" />
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -67,13 +76,13 @@ export default function Header() {
           >
             {locale === "fa" ? "EN" : "FA"}
           </button>
-          <a
-            href="#contact"
+          <Link
+            to={toHomeHash("#contact")}
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-full bg-accent text-primary hover:bg-accent-hover transition-all duration-200 hover:shadow-lg hover:shadow-accent/20"
           >
             {cta}
             <ArrowUpRight size={14} />
-          </a>
+          </Link>
 
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
@@ -109,29 +118,35 @@ export default function Header() {
                 {locale === "fa" ? "English" : "فارسی"}
               </motion.button>
               {NAV_LINKS.map((link, i) => (
-                <motion.a
+                <motion.div
                   key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileOpen(false)}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.12 + i * 0.05 }}
-                  className="text-2xl font-medium text-text-primary hover:text-accent transition-colors"
                 >
-                  {pickLocale(link.label, locale)}
-                </motion.a>
+                  <Link
+                    to={toHomeHash(link.href)}
+                    onClick={() => setIsMobileOpen(false)}
+                    className="text-2xl font-medium text-text-primary hover:text-accent transition-colors"
+                  >
+                    {pickLocale(link.label, locale)}
+                  </Link>
+                </motion.div>
               ))}
-              <motion.a
-                href="#contact"
-                onClick={() => setIsMobileOpen(false)}
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="mt-4 inline-flex items-center gap-2 px-8 py-3 text-base font-medium rounded-full bg-accent text-primary hover:bg-accent-hover transition-all"
               >
-                {cta}
-                <ArrowUpRight size={16} />
-              </motion.a>
+                <Link
+                  to={toHomeHash("#contact")}
+                  onClick={() => setIsMobileOpen(false)}
+                  className="mt-4 inline-flex items-center gap-2 px-8 py-3 text-base font-medium rounded-full bg-accent text-primary hover:bg-accent-hover transition-all"
+                >
+                  {cta}
+                  <ArrowUpRight size={16} />
+                </Link>
+              </motion.div>
             </div>
           </motion.div>
         )}

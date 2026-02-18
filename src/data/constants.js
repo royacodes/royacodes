@@ -5,12 +5,19 @@ import portfolio4 from "../assets/portfolio4.png";
 import portfolio5 from "../assets/portfolio5.png";
 import portfolio8 from "../assets/portfolio8.png";
 
-import articleDesignSystemsEn from "../content/writings/articles/design-systems-scalable-ui.en.md?raw";
-import articleDesignSystemsFa from "../content/writings/articles/design-systems-scalable-ui.fa.md?raw";
-import articleStateOfFrontendEn from "../content/writings/articles/state-of-frontend-2026.en.md?raw";
-import articleStateOfFrontendFa from "../content/writings/articles/state-of-frontend-2026.fa.md?raw";
-import articlePerformanceCaseStudyEn from "../content/writings/articles/performance-case-study.en.md?raw";
-import articlePerformanceCaseStudyFa from "../content/writings/articles/performance-case-study.fa.md?raw";
+import artcl1 from "../assets/articles/artcl1.jpg";
+import artcl2 from "../assets/articles/artcl2.png";
+import artcl3 from "../assets/articles/artcl3.png";
+import artcl4 from "../assets/articles/artcl4.png";
+
+import articleDesignSystemsEn from "../content/writings/articles/artcl1.en.md?raw";
+import articleDesignSystemsFa from "../content/writings/articles/artcl1.fa.md?raw";
+import articleStateOfFrontendEn from "../content/writings/articles/artcl2.en.md?raw";
+import articleStateOfFrontendFa from "../content/writings/articles/artcl2.fa.md?raw";
+import articlePerformanceCaseStudyEn from "../content/writings/articles/artcl3.en.md?raw";
+import articlePerformanceCaseStudyFa from "../content/writings/articles/artcl3.fa.md?raw";
+import articleOptimizationChangedTheGameEn from "../content/writings/articles/artcl4.en.md?raw";
+import articleOptimizationChangedTheGameFa from "../content/writings/articles/artcl4.fa.md?raw";
 
 import tutorialTailwindDesignSystemEn from "../content/writings/tutorials/tailwind-design-system.en.md?raw";
 import tutorialTailwindDesignSystemFa from "../content/writings/tutorials/tailwind-design-system.fa.md?raw";
@@ -23,10 +30,10 @@ import tutorialReactCICDDeployFa from "../content/writings/tutorials/react-cicd-
 // Navigation
 // ─────────────────────────────────────────────
 export const NAV_LINKS = [
+  { label: { en: "Home", fa: "خانه" }, href: "#" },
   { label: { en: "Work", fa: "نمونه\u200cکارها" }, href: "#work" },
   { label: { en: "Services", fa: "خدمات" }, href: "#services" },
   { label: { en: "Writings", fa: "نوشته\u200cها" }, href: "#writings" },
-  { label: { en: "Playground", fa: "آزمایشگاه" }, href: "#playground" },
   { label: { en: "About", fa: "درباره" }, href: "#about" },
 ];
 
@@ -366,6 +373,7 @@ export const ARTICLES = [
       fa: "کلاد در حال تبدیل شدن به موتور اجرایی شماست و OpenAI لایه مدیریتی را می‌سازد. بررسی تغییرات کلیدی در Claude Opus 4.6 و GPT-5.3 که نحوه کار واقعی را تغییر می‌دهند.",
     },
     tags: ["Design", "Systems"],
+    image: artcl1,
     content: {
       en: articleDesignSystemsEn,
       fa: articleDesignSystemsFa,
@@ -386,6 +394,7 @@ export const ARTICLES = [
       fa: "مروری جامع بر فریم‌ورک‌ها، ابزارها و ترندهایی که توسعه‌ی فرانت‌اند مدرن را شکل می‌دهند.",
     },
     tags: ["Frontend", "Trends"],
+    image: artcl2,
     content: {
       en: articleStateOfFrontendEn,
       fa: articleStateOfFrontendFa,
@@ -406,9 +415,31 @@ export const ARTICLES = [
       fa: "چطور با بهینه‌سازی‌های هدفمند زمان لود یک محصول را ۶۰٪ کاهش دادیم.",
     },
     tags: ["Performance", "Case Study"],
+    image: artcl3,
     content: {
       en: articlePerformanceCaseStudyEn,
       fa: articlePerformanceCaseStudyFa,
+    },
+  },
+  {
+    id: 4,
+    slug: "optimization-changed-the-game",
+    title: {
+      en: "When Optimization Changes the Rules of the Game",
+      fa: "وقتی بهینه‌سازی قواعد بازی را تغییر می‌دهد",
+    },
+    category: "Article",
+    readTime: "6 min",
+    date: "Feb 18, 2026",
+    excerpt: {
+      en: "How rewriting OpenClaw in Go created PicoClaw and delivered dramatic gains in startup speed, memory usage, and edge-device accessibility.",
+      fa: "چطور بازنویسی OpenClaw با Go به ساخت PicoClaw منجر شد و جهش چشمگیری در سرعت اجرا، مصرف حافظه و دسترس‌پذیری روی دستگاه‌های Edge ایجاد کرد.",
+    },
+    tags: ["Optimization", "Edge AI", "Go"],
+    image: artcl4,
+    content: {
+      en: articleOptimizationChangedTheGameEn,
+      fa: articleOptimizationChangedTheGameFa,
     },
   },
 ];
@@ -578,12 +609,12 @@ export const ABOUT = {
     en: [
       "I'm a senior software developer who's passionate about building products that make a difference. With over 10 years of experience, I've worked with startups and enterprises alike to craft digital experiences that are both beautiful and functional.",
       "My journey started with a curiosity for how complex systems work across web and mobile platforms. That curiosity evolved into a career focused on designing and building scalable, high-performance applications using modern technologies like Flutter, React, and Android. I believe in the power of clean code and well-engineered solutions.",
-      "Beyond coding, I’m passionate about exploring new technologies, optimizing software architectures, and continuously pushing my technical boundaries.",
+      "Beyond coding, I’m passionate about exploring new technologies, optimizing software architectures, and continuously pushing my technical boundaries. My current interests include artificial intelligence and its applications in software development.",
     ],
     fa: [
       "من یک توسعه\u200cدهنده ارشد نرم\u200cافزار هستم و از ساخت محصولاتی که اثر واقعی دارند لذت می\u200cبرم. با بیش از ۱۰ سال تجربه، هم با استارتاپ\u200cها و هم با سازمان\u200cها کار کرده\u200cام تا تجربه\u200cهای دیجیتال زیبا و کاربردی بسازم.",
       "مسیر من با کنجکاوی درباره نحوه کار سیستم\u200cهای پیچیده در وب و موبایل شروع شد و به تمرکز روی طراحی و ساخت اپلیکیشن\u200cهای مقیاس\u200cپذیر و پرفورمنس\u200cبالا با فناوری\u200cهایی مثل Flutter، React و Android رسید. به قدرت کد تمیز و راهکارهای مهندسی\u200cشده باور دارم.",
-      "فراتر از کدنویسی، به کشف تکنولوژی\u200cهای جدید، بهینه\u200cسازی معماری نرم\u200cافزار و رشد مداوم علاقه\u200cمندم.",
+      "فراتر از کدنویسی، به کشف تکنولوژی\u200cهای جدید، بهینه\u200cسازی معماری نرم\u200cافزار و رشد مداوم علاقه\u200cمندم. علاقه\u200cهای فعلی من شامل هوش مصنوعی و کاربردهای آن در توسعه نرم\u200cافزار است.",
     ],
   },
   now: {
@@ -592,15 +623,15 @@ export const ABOUT = {
       {
         emoji: "📖",
         text: {
-          en: 'Reading "Refactoring UI" by Adam Wathan',
-          fa: "خواندن کتاب «Refactoring UI» از Adam Wathan",
+          en: 'Reading "The-Innovators" by Walter Isaacson',
+          fa: "خواندن کتاب «The-Innovators» از Walter Isaacson",
         },
       },
       {
         emoji: "🔨",
         text: {
-          en: "Building a SaaS product for freelancers",
-          fa: "ساخت یک محصول SaaS برای فریلنسرها",
+          en: "Building an Ads platform for startups",
+          fa: "ساخت یک پلتفرم تبلیغاتی برای استارتاپ‌ها",
         },
       },
       {
@@ -613,21 +644,23 @@ export const ABOUT = {
       {
         emoji: "✍️",
         text: {
-          en: "Writing a blog series on design engineering",
-          fa: "نوشتن مجموعه\u200cای درباره مهندسی طراحی",
+          en: "Writing a blog series on artificial intelligence",
+          fa: "نوشتن مجموعه\u200cای درباره هوش مصنوعی",
         },
       },
     ],
   },
   techStack: [
+    "Flutter (Dart)",
     "React",
+    "Android (Java/Kotlin)",
     "Next.js",
     "TypeScript",
     "Tailwind CSS",
     "Node.js",
-    "Python",
+    "LLMs",
+    "Generative AI",
     "Figma",
-    "PostgreSQL",
   ],
 };
 
@@ -701,10 +734,14 @@ export const TESTIMONIALS = [
 // Footer
 // ─────────────────────────────────────────────
 export const SOCIAL_LINKS = [
-  { label: "GitHub", href: "https://github.com", icon: "Github" },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "Linkedin" },
-  { label: "Twitter / X", href: "https://x.com", icon: "Twitter" },
-  { label: "Dribbble", href: "https://dribbble.com", icon: "Dribbble" },
+  { label: "GitHub", href: "https://github.com/royacodes", icon: "Github" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/roya-raastgar/",
+    icon: "Linkedin",
+  },
+  { label: "Twitter / X", href: "https://x.com/royacodes", icon: "Twitter" },
+  { label: "Telegram", href: "https://t.me/RoyaaCodes", icon: "Telegram" },
 ];
 
 export const FOOTER_LINKS = [

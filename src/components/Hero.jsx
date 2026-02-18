@@ -73,7 +73,7 @@ export default function Hero() {
             </ScrollReveal>
 
             {/* Stats */}
-            <ScrollReveal delay={0.4}>
+            {/* <ScrollReveal delay={0.4}>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-14 pt-8 border-t border-border">
                 {HERO.stats.map((stat) => (
                   <div key={stat.label}>
@@ -88,7 +88,7 @@ export default function Hero() {
                   </div>
                 ))}
               </div>
-            </ScrollReveal>
+            </ScrollReveal> */}
           </div>
 
           {/* Right — Photo placeholder */}

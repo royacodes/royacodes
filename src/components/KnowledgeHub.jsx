@@ -35,6 +35,17 @@ function WritingCard({ item, index, type }) {
         to={`/writings/${type}/${item.slug ?? item.id}`}
         className="group block p-6 rounded-2xl bg-card border border-border hover:border-accent/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-accent/5"
       >
+        {item.image && (
+          <div className="mb-4 overflow-hidden rounded-xl border border-border">
+            <img
+              src={item.image}
+              alt={title}
+              className="h-44 w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              loading="lazy"
+            />
+          </div>
+        )}
+
         <div className="flex items-center gap-3 mb-4">
           <span
             className={`text-xs font-semibold px-3 py-1 rounded-full ${

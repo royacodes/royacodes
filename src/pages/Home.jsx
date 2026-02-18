@@ -14,10 +14,7 @@ export default function Home() {
       <Services />
       <Portfolio />
       <KnowledgeHub />
-      <Playground />
-      <Resources />
       <About />
-      <Testimonials />
     </main>
   );
 }

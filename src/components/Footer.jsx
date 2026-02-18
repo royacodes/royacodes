@@ -7,13 +7,15 @@ import {
   Heart,
   Send,
 } from "lucide-react";
+import { FaTelegramPlane } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { SOCIAL_LINKS, FOOTER_LINKS, HERO, SECTIONS } from "../data/constants";
 import ScrollReveal from "./ScrollReveal";
 import useLocale from "../hooks/useLocale";
 import { pickLocale } from "../utils/locale";
 import cv from "../assets/cv.pdf";
 
-const socialIconMap = { Github, Linkedin, Twitter, Dribbble: Twitter };
+const socialIconMap = { Github, Linkedin, Twitter, Telegram: FaTelegramPlane };
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -54,6 +56,14 @@ export default function Footer() {
     alert(newsletterThanks);
   };
 
+  const toHomeHash = (hash) => {
+    if (!hash?.startsWith("#")) {
+      return hash;
+    }
+
+    return `/${hash}`;
+  };
+
   return (
     <footer id="contact" className="border-t border-border bg-secondary/30">
       {/* Contact CTA Band */}
@@ -71,18 +81,18 @@ export default function Footer() {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 mt-8">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:roya.raastgar@gmail.com"
                 className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold rounded-full bg-accent text-primary hover:bg-accent-hover transition-all duration-200 hover:shadow-xl hover:shadow-accent/20 hover:-translate-y-0.5"
               >
                 {startConversation}
                 <ArrowUpRight size={16} />
               </a>
-              <a
+              {/* <a
                 href={cv}
                 className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold rounded-full border border-border text-text-primary hover:bg-card hover:border-accent/30 transition-all duration-200 hover:-translate-y-0.5"
               >
                 {downloadCv}
-              </a>
+              </a> */}
             </div>
           </div>
         </ScrollReveal>
@@ -113,12 +123,12 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {FOOTER_LINKS.map((link) => (
                   <li key={link.href}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={toHomeHash(link.href)}
                       className="text-sm text-text-secondary hover:text-accent transition-colors"
                     >
                       {pickLocale(link.label, locale)}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
