@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://royacodes.github.io/royacodes/sitemap.xml
