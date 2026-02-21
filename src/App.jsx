@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { HelmetProvider } from "react-helmet-async";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -11,6 +12,7 @@ import WritingDetail from "./pages/WritingDetail";
 
 export default function App() {
   return (
+    <HelmetProvider>
     <LocaleProvider>
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
@@ -27,5 +29,6 @@ export default function App() {
         </div>
       </BrowserRouter>
     </LocaleProvider>
+    </HelmetProvider>
   );
 }

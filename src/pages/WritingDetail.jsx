@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
 import { ARTICLES, TUTORIALS, SECTIONS } from "../data/constants";
 import useLocale from "../hooks/useLocale";
@@ -80,7 +81,30 @@ export default function WritingDetail() {
     locale,
   );
 
+  const BASE_URL = "https://royacodes.github.io/royacodes";
+  const pageTitle = `${title} | RoyaCodes`;
+  const pageUrl = `${BASE_URL}/writings/${normalizedType}/${slug}`;
+  const pageImage = post.image || `${BASE_URL}/og-image.png`;
+
   return (
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={excerpt} />
+        {Array.isArray(post.tags) && post.tags.length > 0 && (
+          <meta name="keywords" content={post.tags.join(", ")} />
+        )}
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={excerpt} />
+        <meta property="og:image" content={pageImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={excerpt} />
+        <meta name="twitter:image" content={pageImage} />
+      </Helmet>
     <motion.article
       initial={{ opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
@@ -175,5 +199,6 @@ export default function WritingDetail() {
         </div>
       </div>
     </motion.article>
+    </>
   );
 }
