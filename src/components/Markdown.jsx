@@ -5,6 +5,7 @@ export default function Markdown({ content }) {
   if (!content) return null;
 
   return (
+    <div className="markdown-content">
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       components={{
@@ -79,5 +80,6 @@ export default function Markdown({ content }) {
     >
       {content}
     </ReactMarkdown>
+    </div>
   );
 }

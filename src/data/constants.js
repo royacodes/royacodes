@@ -9,6 +9,7 @@ import artcl1 from "../assets/articles/artcl1.jpg";
 import artcl2 from "../assets/articles/artcl2.png";
 import artcl3 from "../assets/articles/artcl3.png";
 import artcl4 from "../assets/articles/artcl4.png";
+import artcl5 from "../assets/articles/artcl5.png";
 
 import articleDesignSystemsEn from "../content/writings/articles/artcl1.en.md?raw";
 import articleDesignSystemsFa from "../content/writings/articles/artcl1.fa.md?raw";
@@ -18,6 +19,8 @@ import articlePerformanceCaseStudyEn from "../content/writings/articles/artcl3.e
 import articlePerformanceCaseStudyFa from "../content/writings/articles/artcl3.fa.md?raw";
 import articleOptimizationChangedTheGameEn from "../content/writings/articles/artcl4.en.md?raw";
 import articleOptimizationChangedTheGameFa from "../content/writings/articles/artcl4.fa.md?raw";
+import articleInternetOutageSurvivalEn from "../content/writings/articles/artcl5.en.md?raw";
+import articleInternetOutageSurvivalFa from "../content/writings/articles/artcl5.fa.md?raw";
 
 import tutorialTailwindDesignSystemEn from "../content/writings/tutorials/tailwind-design-system.en.md?raw";
 import tutorialTailwindDesignSystemFa from "../content/writings/tutorials/tailwind-design-system.fa.md?raw";
@@ -440,6 +443,27 @@ export const ARTICLES = [
     content: {
       en: articleOptimizationChangedTheGameEn,
       fa: articleOptimizationChangedTheGameFa,
+    },
+  },
+  {
+    id: 5,
+    slug: "internet-outage-survival-guide",
+    title: {
+      en: "A Survival Guide for Developers During Internet Outages",
+      fa: "راهنمای جامع بقا در شرایط قطعی اینترنت برای برنامه‌نویسان",
+    },
+    category: "Article",
+    readTime: "10 min",
+    date: "Feb 23, 2026",
+    excerpt: {
+      en: "Mirrors, offline caches, and local registries — everything Flutter, React, Android, and iOS developers need to keep building when the internet goes dark.",
+      fa: "میرورها، کش آفلاین و رجیستری محلی — همه آنچه برنامه‌نویسان Flutter، React، Android و iOS برای ادامه کار در زمان قطعی اینترنت نیاز دارند.",
+    },
+    tags: ["Flutter", "Android", "iOS", "React", "Offline"],
+    image: artcl5,
+    content: {
+      en: articleInternetOutageSurvivalEn,
+      fa: articleInternetOutageSurvivalFa,
     },
   },
 ];

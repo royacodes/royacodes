@@ -26,6 +26,27 @@ body {
   overflow-x: hidden;
 }
 
+.markdown-content :not(pre) > code {
+  display: inline !important;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  padding: 0.1em 0.3em !important;
+  border: none !important;
+  background-color: #2d333b !important;
+  border-radius: 4px;
+}
+
+.markdown-content pre {
+  display: block;
+  overflow-x: auto;
+}
+
+.markdown-content pre > code {
+  display: block !important;
+  white-space: pre;
+}
+
 ::selection {
   background-color: rgba(0, 200, 150, 0.3);
   color: #fff;
