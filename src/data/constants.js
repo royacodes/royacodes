@@ -10,6 +10,7 @@ import artcl2 from "../assets/articles/artcl2.png";
 import artcl3 from "../assets/articles/artcl3.png";
 import artcl4 from "../assets/articles/artcl4.png";
 import artcl5 from "../assets/articles/artcl5.png";
+import artcl6 from "../assets/articles/artcl6.png";
 
 import articleDesignSystemsEn from "../content/writings/articles/artcl1.en.md?raw";
 import articleDesignSystemsFa from "../content/writings/articles/artcl1.fa.md?raw";
@@ -21,6 +22,8 @@ import articleOptimizationChangedTheGameEn from "../content/writings/articles/ar
 import articleOptimizationChangedTheGameFa from "../content/writings/articles/artcl4.fa.md?raw";
 import articleInternetOutageSurvivalEn from "../content/writings/articles/artcl5.en.md?raw";
 import articleInternetOutageSurvivalFa from "../content/writings/articles/artcl5.fa.md?raw";
+import articleGitNexusVibeCodingEn from "../content/writings/articles/artcl6.en.md?raw";
+import articleGitNexusVibeCodingFa from "../content/writings/articles/artcl6.fa.md?raw";
 
 import tutorialTailwindDesignSystemEn from "../content/writings/tutorials/tailwind-design-system.en.md?raw";
 import tutorialTailwindDesignSystemFa from "../content/writings/tutorials/tailwind-design-system.fa.md?raw";
@@ -362,66 +365,45 @@ export const PROJECTS = [
 // ─────────────────────────────────────────────
 export const ARTICLES = [
   {
-    id: 1,
-    slug: "design-systems-scalable-ui",
+    id: 6,
+    slug: "gitnexus-beyond-vibe-coding",
     title: {
-      en: "Claude Opus 4.6 Is Not What You Think",
-      fa: "کلاد اوپوس ۴.۶ آن چیزی نیست که فکر می‌کنید",
+      en: "Beyond Vibe Coding: How GitNexus Prevents AI from Breaking Your Codebase",
+      fa: "فراتر از Vibe Coding: چگونه GitNexus از فروپاشی کدهای شما توسط هوش مصنوعی جلوگیری می‌کند؟",
     },
     category: "Article",
-    readTime: "8 min",
-    date: "Jan 15, 2026",
+    readTime: "6 min",
+    date: "Feb 28, 2026",
     excerpt: {
-      en: "Claude Opus 4.6 is a monster, but not for the reasons you think. While Anthropic builds the ultimate 'execution engine' for deep work, OpenAI is constructing the management layer. Here is the new reality of your AI toolchain.",
-      fa: "کلاد در حال تبدیل شدن به موتور اجرایی شماست و OpenAI لایه مدیریتی را می‌سازد. بررسی تغییرات کلیدی در Claude Opus 4.6 و GPT-5.3 که نحوه کار واقعی را تغییر می‌دهند.",
+      en: "Most AI coding tools are hyper-focused on the active file and miss 47 other functions that depend on it. GitNexus builds a knowledge graph of your entire codebase so your AI never codes in the dark again.",
+      fa: "اکثر ابزارهای هوش مصنوعی فقط روی فایل فعلی تمرکز می‌کنند و ۴۷ تابع دیگر وابسته به آن را نادیده می‌گیرند. GitNexus یک گراف دانش از کل کدبیس شما می‌سازد تا هوش مصنوعی دیگر هرگز در تاریکی کد نزند.",
     },
-    tags: ["Design", "Systems"],
-    image: artcl1,
+    tags: ["AI", "Developer Tools", "MCP"],
+    image: artcl6,
     content: {
-      en: articleDesignSystemsEn,
-      fa: articleDesignSystemsFa,
+      en: articleGitNexusVibeCodingEn,
+      fa: articleGitNexusVibeCodingFa,
     },
   },
   {
-    id: 2,
-    slug: "state-of-frontend-2026",
+    id: 5,
+    slug: "internet-outage-survival-guide",
     title: {
-      en: "The State of Frontend in 2026",
-      fa: "وضعیت Frontend در سال ۲۰۲۶",
+      en: "A Survival Guide for Developers During Internet Outages",
+      fa: "راهنمای جامع بقا در شرایط قطعی اینترنت برای برنامه‌نویسان",
     },
     category: "Article",
-    readTime: "12 min",
-    date: "Dec 20, 2025",
+    readTime: "10 min",
+    date: "Feb 23, 2026",
     excerpt: {
-      en: "A comprehensive overview of the frameworks, tools, and trends defining modern frontend development.",
-      fa: "مروری جامع بر فریم‌ورک‌ها، ابزارها و ترندهایی که توسعه‌ی فرانت‌اند مدرن را شکل می‌دهند.",
+      en: "Mirrors, offline caches, and local registries — everything Flutter, React, Android, and iOS developers need to keep building when the internet goes dark.",
+      fa: "میرورها، کش آفلاین و رجیستری محلی — همه آنچه برنامه‌نویسان Flutter، React، Android و iOS برای ادامه کار در زمان قطعی اینترنت نیاز دارند.",
     },
-    tags: ["Frontend", "Trends"],
-    image: artcl2,
+    tags: ["Flutter", "Android", "iOS", "React", "Offline"],
+    image: artcl5,
     content: {
-      en: articleStateOfFrontendEn,
-      fa: articleStateOfFrontendFa,
-    },
-  },
-  {
-    id: 3,
-    slug: "performance-case-study",
-    title: {
-      en: "Building for Performance: A Case Study",
-      fa: "ساخت برای Performance: یک مطالعه‌ی موردی",
-    },
-    category: "Case Study",
-    readTime: "15 min",
-    date: "Nov 8, 2025",
-    excerpt: {
-      en: "How we reduced a client's load time by 60% through strategic optimization.",
-      fa: "چطور با بهینه‌سازی‌های هدفمند زمان لود یک محصول را ۶۰٪ کاهش دادیم.",
-    },
-    tags: ["Performance", "Case Study"],
-    image: artcl3,
-    content: {
-      en: articlePerformanceCaseStudyEn,
-      fa: articlePerformanceCaseStudyFa,
+      en: articleInternetOutageSurvivalEn,
+      fa: articleInternetOutageSurvivalFa,
     },
   },
   {
@@ -446,24 +428,66 @@ export const ARTICLES = [
     },
   },
   {
-    id: 5,
-    slug: "internet-outage-survival-guide",
+    id: 3,
+    slug: "performance-case-study",
     title: {
-      en: "A Survival Guide for Developers During Internet Outages",
-      fa: "راهنمای جامع بقا در شرایط قطعی اینترنت برای برنامه‌نویسان",
+      en: "Building for Performance: A Case Study",
+      fa: "ساخت برای Performance: یک مطالعه‌ی موردی",
+    },
+    category: "Case Study",
+    readTime: "15 min",
+    date: "Nov 8, 2025",
+    excerpt: {
+      en: "How we reduced a client's load time by 60% through strategic optimization.",
+      fa: "چطور با بهینه‌سازی‌های هدفمند زمان لود یک محصول را ۶۰٪ کاهش دادیم.",
+    },
+    tags: ["Performance", "Case Study"],
+    image: artcl3,
+    content: {
+      en: articlePerformanceCaseStudyEn,
+      fa: articlePerformanceCaseStudyFa,
+    },
+  },
+  {
+    id: 2,
+    slug: "state-of-frontend-2026",
+    title: {
+      en: "The State of Frontend in 2026",
+      fa: "وضعیت Frontend در سال ۲۰۲۶",
     },
     category: "Article",
-    readTime: "10 min",
-    date: "Feb 23, 2026",
+    readTime: "12 min",
+    date: "Dec 20, 2025",
     excerpt: {
-      en: "Mirrors, offline caches, and local registries — everything Flutter, React, Android, and iOS developers need to keep building when the internet goes dark.",
-      fa: "میرورها، کش آفلاین و رجیستری محلی — همه آنچه برنامه‌نویسان Flutter، React، Android و iOS برای ادامه کار در زمان قطعی اینترنت نیاز دارند.",
+      en: "A comprehensive overview of the frameworks, tools, and trends defining modern frontend development.",
+      fa: "مروری جامع بر فریم‌ورک‌ها، ابزارها و ترندهایی که توسعه‌ی فرانت‌اند مدرن را شکل می‌دهند.",
     },
-    tags: ["Flutter", "Android", "iOS", "React", "Offline"],
-    image: artcl5,
+    tags: ["Frontend", "Trends"],
+    image: artcl2,
     content: {
-      en: articleInternetOutageSurvivalEn,
-      fa: articleInternetOutageSurvivalFa,
+      en: articleStateOfFrontendEn,
+      fa: articleStateOfFrontendFa,
+    },
+  },
+  {
+    id: 1,
+    slug: "design-systems-scalable-ui",
+    title: {
+      en: "Claude Opus 4.6 Is Not What You Think",
+      fa: "کلاد اوپوس ۴.۶ آن چیزی نیست که فکر می‌کنید",
+    },
+    category: "Article",
+    readTime: "8 min",
+    date: "Jan 15, 2026",
+    excerpt: {
+      en: "Claude Opus 4.6 is a monster, but not for the reasons you think. While Anthropic builds the ultimate 'execution engine' for deep work, OpenAI is constructing the management layer. Here is the new reality of your AI toolchain.",
+      fa: "کلاد در حال تبدیل شدن به موتور اجرایی شماست و OpenAI لایه مدیریتی را می‌سازد. بررسی تغییرات کلیدی در Claude Opus 4.6 و GPT-5.3 که نحوه کار واقعی را تغییر می‌دهند.",
+    },
+    tags: ["Design", "Systems"],
+    image: artcl1,
+    content: {
+      en: articleDesignSystemsEn,
+      fa: articleDesignSystemsFa,
     },
   },
 ];
