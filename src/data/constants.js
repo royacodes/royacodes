@@ -11,6 +11,8 @@ import artcl3 from "../assets/articles/artcl3.png";
 import artcl4 from "../assets/articles/artcl4.png";
 import artcl5 from "../assets/articles/artcl5.png";
 import artcl6 from "../assets/articles/artcl6.png";
+import artcl7 from "../assets/articles/artcl7.png";
+
 
 import articleDesignSystemsEn from "../content/writings/articles/artcl1.en.md?raw";
 import articleDesignSystemsFa from "../content/writings/articles/artcl1.fa.md?raw";
@@ -364,6 +366,33 @@ export const PROJECTS = [
 // Knowledge Hub (Blog & Tutorials)
 // ─────────────────────────────────────────────
 export const ARTICLES = [
+  {
+  id: 7,
+  slug: "http-query-method",
+  title: {
+    en: "HTTP QUERY (RFC 10008): A Better Way to Design Read-Only API Queries",
+    fa: "متد HTTP QUERY (RFC 10008): گامی به‌سوی طراحی بهتر APIها",
+  },
+  category: "Article",
+  readTime: "5 min",
+  date: "Jun 30, 2026",
+  excerpt: {
+    en: "The IETF has officially standardized the HTTP QUERY method in RFC 10008. Learn why this new safe HTTP method fills the gap between GET and POST and how it improves API semantics and developer experience.",
+    fa: "IETF با انتشار RFC 10008 متد HTTP QUERY را به‌صورت رسمی استاندارد کرده است. در این مقاله بررسی می‌کنیم که چرا این متد فاصله میان GET و POST را پر می‌کند و چگونه طراحی APIها را شفاف‌تر و استانداردتر می‌سازد.",
+  },
+  tags: [
+    "HTTP",
+    "REST API",
+    "RFC10008",
+    "Backend",
+    "API Design",
+  ],
+  image: artcl6,
+  content: {
+    en: articleHttpQueryEn,
+    fa: articleHttpQueryFa,
+  },
+},
   {
     id: 6,
     slug: "gitnexus-beyond-vibe-coding",
